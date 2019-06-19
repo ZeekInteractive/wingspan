@@ -4,7 +4,7 @@
 #### Quick Start
 1. Install theme dependencies
 `npm install`
-2. Run a find for the string/slug drift throughout the theme and replace it with your project name.
+2. Run a find for the string/slug wingspan throughout the theme and replace it with your project name.
 
 #### Build commands
 1. `npm run dev` - creates unminified CSS and JS
