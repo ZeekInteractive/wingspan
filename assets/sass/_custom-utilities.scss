@@ -1,0 +1,9 @@
+.responsive-embed {
+	position: relative;
+	height: 0;
+	padding-bottom: 56.25%;
+
+	iframe {
+		@apply absolute top-0 left-0 w-full h-full;
+	}
+}
