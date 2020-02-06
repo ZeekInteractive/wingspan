@@ -1,7 +1,7 @@
 const path = require('path')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const purgecss = require('@fullhuman/postcss-purgecss')
 
 const env = process.env.NODE_ENV
@@ -59,19 +59,19 @@ const config = {
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env']
-        }
+        },
       },
       // Handle our .scss files through our loaders
       {
         test: /\.scss$/,
         use: [ MiniCssExtractPlugin.loader, css, postcss, sass ],
-      }
+      },
     ]
   },
   plugins: [
     // Tell webpack to output our CSS to a separate file, not within our JS
-    new MiniCssExtractPlugin('[name].css')
-  ]
+    new MiniCssExtractPlugin('[name].css'),
+  ],
 }
 
 
@@ -128,8 +128,8 @@ if (env === 'production') {
               return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
             }
           },
-          extensions: ['php', 'js', 'svg']
-        }
+          extensions: ['php', 'js', 'svg'],
+        },
       ],
       whitelistPatterns,
       whitelist,
@@ -137,4 +137,4 @@ if (env === 'production') {
   )
 }
 
-module.exports = config;
+module.exports = config
