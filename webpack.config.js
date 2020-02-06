@@ -119,7 +119,8 @@ if (env === 'production') {
     purgecss({
       content: [
         './*.php',
-        './node_modules/tailwind/dist/preflight.min.css', // do not purge Tailwindcss' preflight
+        // Do not purge tailwindcss base styles, which include normalize
+        './node_modules/tailwindcss/dist/base.css',
       ],
       extractors: [
         {
