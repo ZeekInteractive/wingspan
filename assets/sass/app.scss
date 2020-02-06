@@ -1,15 +1,20 @@
-// Add TailwindCSS base
+// Add tailwindcss base
 @tailwind base;
 
-// Add our custom base styles before Tailwind components and utilities
+// Add our custom base styles
 @import "base/base";
 
-// Add Tailwind assets
+// Add tailwindcss components
 @tailwind components;
+
+// Add custom components
+@import "components/components";
+
+// Add tailwindcss utilities
 @tailwind utilities;
 
-// Custom utilities
-@import "custom-utilities";
+// Add custom utilities
+@import "utilities/utilities";
 
 // Vendors
 @import "vendors/vendors";
