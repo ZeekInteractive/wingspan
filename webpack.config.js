@@ -46,7 +46,7 @@ const config = {
   optimization: {
     minimizer: [
       new OptimizeCSSAssetsPlugin({}),
-      new UglifyJsPlugin({}),
+      new TerserPlugin({}),
     ]
   },
   module: {
