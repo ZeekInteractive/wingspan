@@ -8,4 +8,4 @@
 
 #### Build commands
 1. `npm run dev` - creates unminified CSS and JS
-2. `npm run prod` - creates production-ready minified CSS/JS and purges unused CSS classes (📖[Purgecss docs](https://www.purgecss.com/)).
+2. `npm run prod` - creates production-ready minified CSS/JS and purges unused CSS classes (📖[Tailwindcss docs](https://tailwindcss.com/docs/controlling-file-size/)).
