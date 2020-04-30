@@ -13,9 +13,7 @@ namespace App; ?>
 <body <?php body_class( 'font-sans font-normal text-black leading-normal text-base min-h-screen flex flex-col' ); ?>>
 
 	<?php
-	if ( function_exists( 'wp_body_open' ) ) {
-		wp_body_open();
-	} ?>
+	wp_body_open(); ?>
 
 	<header class="px-4 mb-8">
 		<h1><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h1>
