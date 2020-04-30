@@ -1,3 +1,5 @@
+const { fontFamily } = require('tailwindcss/defaultTheme')
+
 const whitelist = []
 
 const whitelistPatterns = [
@@ -42,18 +44,18 @@ module.exports = {
       whitelistPatterns,
     }
   },
-  
+
   theme: {
 
-    extend: {},
-
-    fontFamily: {
-      'source-sans': ['Source Sans Pro', 'sans-serif']
+    extend: {
+      fontFamily: {
+        sans: [`Source Sans Pro`, ...fontFamily.sans],
+      },
     },
 
     container: {
       center: true,
-      padding: '1rem',
+      padding: `1rem`,
     },
 
   },

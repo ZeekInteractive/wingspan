@@ -10,7 +10,7 @@ namespace App; ?>
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'font-source-sans font-normal text-black leading-normal text-base min-h-screen flex flex-col' ); ?>>
+<body <?php body_class( 'font-sans font-normal text-black leading-normal text-base min-h-screen flex flex-col' ); ?>>
 
 	<?php
 	if ( function_exists( 'wp_body_open' ) ) {
