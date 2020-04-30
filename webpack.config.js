@@ -2,7 +2,6 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
-const purgecss = require('@fullhuman/postcss-purgecss')
 
 const env = process.env.NODE_ENV
 
@@ -33,7 +32,7 @@ const sass = {
 }
 
 // Let's put our configuration together
-const config = {
+module.exports = {
   entry: './assets/js/main.js',
   output: {
     filename: 'bundle.js',
@@ -73,69 +72,3 @@ const config = {
     new MiniCssExtractPlugin('[name].css'),
   ],
 }
-
-
-// Optimize, if building for production
-if (env === 'production') {
-
-  const whitelist = [
-  ]
-
-  const whitelistPatterns = [
-    /^home(-.*)?$/,
-    /^blog(-.*)?$/,
-    /^archive(-.*)?$/,
-    /^date(-.*)?$/,
-    /^error404(-.*)?$/,
-    /^admin-bar(-.*)?$/,
-    /^search(-.*)?$/,
-    /^nav(-.*)?$/,
-    /^wp(-.*)?$/,
-    /^screen(-.*)?$/,
-    /^navigation(-.*)?$/,
-    /^(.*)-template(-.*)?$/,
-    /^(.*)?-?single(-.*)?$/,
-    /^postid-(.*)?$/,
-    /^post-(.*)?$/,
-    /^attachmentid-(.*)?$/,
-    /^attachment(-.*)?$/,
-    /^page(-.*)?$/,
-    /^(post-type-)?archive(-.*)?$/,
-    /^author(-.*)?$/,
-    /^category(-.*)?$/,
-    /^tag(-.*)?$/,
-    /^menu(-.*)?$/,
-    /^tags(-.*)?$/,
-    /^tax-(.*)?$/,
-    /^term-(.*)?$/,
-    /^date-(.*)?$/,
-    /^(.*)?-?paged(-.*)?$/,
-    /^depth(-.*)?$/,
-    /^children(-.*)?$/,
-    /^h[1-6]?$/,
-  ]
-
-  postcss.options.plugins.push(
-    purgecss({
-      content: [
-        './*.php',
-        // Do not purge tailwindcss base styles, which include normalize
-        './node_modules/tailwindcss/dist/base.css',
-      ],
-      extractors: [
-        {
-          extractor: class TailwindExtractor {
-            static extract(content) {
-              return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
-            }
-          },
-          extensions: ['php', 'js', 'svg'],
-        },
-      ],
-      whitelistPatterns,
-      whitelist,
-    })
-  )
-}
-
-module.exports = config
