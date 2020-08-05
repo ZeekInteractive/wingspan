@@ -33,7 +33,7 @@ add_action( 'wp_enqueue_scripts', function () {
 } );
 
 add_action( 'wp_head', function () {
-	$main_css = get_file_contents( '/dist/main.css' );
+	$main_css = get_file_contents( '/dist/bundle.css' );
 	
 	if ( empty( $main_css ) ) {
 		return false;
