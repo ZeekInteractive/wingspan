@@ -17,6 +17,19 @@ add_action( 'wp_enqueue_scripts', function () {
 		THEME_VERSION,
 		true
 	);
+	
+	/**
+	 * Image/Iframe lazy loading
+	 *
+	 * @link https://github.com/aFarkas/lazysizes
+	 */
+	wp_enqueue_script(
+		'lazysizes',
+		THEME_URL . '/dist/lazysizes.js',
+		[],
+		THEME_VERSION,
+		false
+	);
 });
 
 add_action( 'wp_head', function () {
