@@ -14,3 +14,4 @@ require_once( THEME_DIR . '/src/enqueue.php' );
 require_once( THEME_DIR . '/src/setup.php' );
 require_once( THEME_DIR . '/src/embeds.php' );
 require_once( THEME_DIR . '/src/custom-login.php' );
+require_once( THEME_DIR . '/src/images.php' );
