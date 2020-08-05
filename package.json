@@ -28,5 +28,8 @@
     "terser-webpack-plugin": "^2.3.7",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "lazysizes": "^5.2.2"
   }
 }
