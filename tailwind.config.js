@@ -39,10 +39,18 @@ const whitelistPatterns = [
 module.exports = {
   purge: {
     content: ['**/*.php'],
+    preserveHtmlElements: true,
+    mode: 'layers',
+    layers: ['utilities'],
     options: {
       whitelist,
       whitelistPatterns,
     }
+  },
+
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
   },
 
   theme: {
