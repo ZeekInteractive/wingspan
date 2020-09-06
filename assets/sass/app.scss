@@ -1,13 +1,9 @@
-/*! purgecss start ignore */
 @tailwind base;
-/*! purgecss end ignore */
 
 // Add our custom base styles
 @import "base/base";
 
-/*! purgecss start ignore */
 @tailwind components;
-/*! purgecss end ignore */
 
 // Add custom components
 @import "components/components";
