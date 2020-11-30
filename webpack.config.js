@@ -17,10 +17,12 @@ const postcss = {
   loader: 'postcss-loader',
   options: {
     sourceMap: true,
+    postcssOptions: {
     plugins: [
       require('tailwindcss'),
       require('autoprefixer'),
     ]
+    }
   }
 }
 

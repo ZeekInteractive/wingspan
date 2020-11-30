@@ -1,6 +1,6 @@
 const { fontFamily } = require('tailwindcss/defaultTheme')
 
-const whitelist = []
+const safelist = []
 
 const whitelistPatterns = [
   /^home(-.*)?$/,
@@ -43,14 +43,9 @@ module.exports = {
     mode: 'layers',
     layers: ['utilities'],
     options: {
-      whitelist,
+      safelist,
       whitelistPatterns,
     }
-  },
-
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
   },
 
   theme: {
