@@ -1,4 +1,7 @@
-<p align="center">WordPress starter theme using TailwindCSS</p>
+<h1 align="center">WordPress starter theme using TailwindCSS</h1>
+
+#### What does this do?
+This WordPress theme is intended to be a starting point to build your own custom WordPress theme. It's configured with TailwindCSS along with other things such as webpack.
 
 
 #### Quick Start
