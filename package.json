@@ -1,6 +1,6 @@
 {
-  "name": "wingspan",
-  "version": "1.0.0",
+  "name": "Wingspan",
+  "version": "1.0.1",
   "description": "WordPress starter theme using TailwindCSS",
   "main": "webpack.config.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "concurrently": "^7.1.0",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
-    "mini-css-extract-plugin": "^2.6.0",
+    "mini-css-extract-plugin": "^0.9.0",
     "optimize-css-assets-webpack-plugin": "^6.0.1",
     "postcss": "^8.4.12",
     "postcss-loader": "^4.1.0",
