@@ -37,7 +37,7 @@ const whitelistPatterns = [
 ]
 
 module.exports = {
-  purge: {
+  
     content: ['**/*.php'],
     preserveHtmlElements: true,
     mode: 'layers',
@@ -45,8 +45,8 @@ module.exports = {
     options: {
       safelist,
       whitelistPatterns,
-    }
-  },
+    },
+  
 
   theme: {
 
@@ -62,8 +62,6 @@ module.exports = {
     },
 
   },
-
-  variants: {},
 
   plugins: [],
 }
