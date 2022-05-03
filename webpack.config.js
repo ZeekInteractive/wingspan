@@ -25,13 +25,6 @@ const postcss = {
 	}
 }
 
-const sass = {
-	loader: 'sass-loader',
-	options: {
-		sourceMap: true,
-	}
-}
-
 // Let's put our configuration together
 module.exports = {
 	entry: {
@@ -65,7 +58,7 @@ module.exports = {
 			// Handle our .scss files through our loaders
 			{
 				test: /\.scss$/,
-				use: [MiniCssExtractPlugin.loader, css, postcss, sass],
+				use: [MiniCssExtractPlugin.loader, css, postcss],
 			},
 		]
 	},

@@ -1,18 +1,8 @@
+@import "./base/_base.scss";
+@import "./components/_components.scss";
+@import "./utilities/_utilities.scss";
+@import "./vendors/_vendors.scss";
+
 @tailwind base;
-
-// Add our custom base styles
-@import "base/base";
-
 @tailwind components;
-
-// Add custom components
-@import "components/components";
-
-// Add tailwindcss utilities
 @tailwind utilities;
-
-// Add custom utilities
-@import "utilities/utilities";
-
-// Vendors
-@import "vendors/vendors";
