@@ -35,8 +35,7 @@ const sass = {
 // Let's put our configuration together
 module.exports = {
 	entry: {
-		bundle: './assets/js/main.js',
-		lazysizes: './assets/js/lazysizes.js',
+		bundle: './assets/js/main.js'
 	},
 	output: {
 		filename: '[name].js',
