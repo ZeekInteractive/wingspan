@@ -12,19 +12,6 @@ const css = {
 	}
 }
 
-const postcss = {
-	loader: 'postcss-loader',
-	options: {
-		sourceMap: true,
-		postcssOptions: {
-			plugins: [
-				require( 'tailwindcss' ),
-				require( 'autoprefixer' ),
-			]
-		}
-	}
-}
-
 // Let's put our configuration together
 module.exports = {
 	entry: {
@@ -58,7 +45,7 @@ module.exports = {
 			// Handle our .scss files through our loaders
 			{
 				test: /\.scss$/,
-				use: [MiniCssExtractPlugin.loader, css, postcss],
+				use: [MiniCssExtractPlugin.loader, css],
 			},
 		]
 	},
