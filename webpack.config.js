@@ -27,10 +27,10 @@ module.exports = {
 					presets: ['@babel/preset-env']
 				},
 			},
-			// Handle our .scss files through our loaders
+			// Handle our .css files through our loaders
 			{
-				test: /\.scss$/i,
-				use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
+				test: /\.css$/i,
+				use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
 			},
 		]
 	},
