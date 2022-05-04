@@ -1,36 +1,29 @@
 {
-  "name": "wingspan",
-  "version": "1.0.0",
-  "description": "WordPress starter theme using TailwindCSS",
-  "main": "webpack.config.js",
-  "scripts": {
-    "start": "cross-env NODE_ENV=development webpack --watch --hide-modules",
-    "dev": "cross-env NODE_ENV=development webpack --hide-modules",
-    "prod": "cross-env NODE_ENV=production webpack --hide-modules",
-    "build": "npm run prod"
-  },
-  "author": "Zeek Interactive",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
-    "autoprefixer": "^10.0.4",
-    "babel-loader": "^8.1.0",
-    "concurrently": "^5.3.0",
-    "cross-env": "^7.0.2",
-    "css-loader": "^3.6.0",
-    "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.14.1",
-    "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "postcss": "^8.1.10",
-    "postcss-loader": "^4.1.0",
-    "sass-loader": "^7.3.1",
-    "tailwindcss": "^2.0.1",
-    "terser-webpack-plugin": "^2.3.7",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
-  },
-  "dependencies": {
-    "lazysizes": "^5.2.2"
-  }
+	"name": "wingspan",
+	"version": "1.0.0",
+	"description": "WordPress starter theme using TailwindCSS",
+	"main": "webpack.config.js",
+	"scripts": {
+		"start": "cross-env NODE_ENV=development webpack --watch",
+		"dev": "cross-env NODE_ENV=development webpack",
+		"prod": "cross-env NODE_ENV=production webpack",
+		"build": "npm run prod"
+	},
+	"author": "Zeek Interactive",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.17.10",
+		"@babel/preset-env": "^7.17.10",
+		"autoprefixer": "^10.4.7",
+		"babel-loader": "^8.2.5",
+		"cross-env": "^7.0.3",
+		"css-loader": "^6.7.1",
+		"mini-css-extract-plugin": "^2.6.0",
+		"postcss": "^8.4.13",
+		"postcss-import": "^14.1.0",
+		"postcss-loader": "^6.2.1",
+		"tailwindcss": "^3.0.24",
+		"webpack": "^5.72.0",
+		"webpack-cli": "^4.9.2"
+	}
 }

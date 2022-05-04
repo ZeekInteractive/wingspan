@@ -17,19 +17,6 @@ add_action( 'wp_enqueue_scripts', function () {
 		THEME_VERSION,
 		true
 	);
-	
-	/**
-	 * Image/Iframe lazy loading
-	 *
-	 * @link https://github.com/aFarkas/lazysizes
-	 */
-	wp_enqueue_script(
-		'lazysizes',
-		THEME_URL . '/dist/lazysizes.js',
-		[],
-		THEME_VERSION,
-		false
-	);
 } );
 
 add_action( 'wp_head', function () {
@@ -70,18 +57,4 @@ add_filter( 'script_loader_tag', function ( $tag, $handle ) {
 	}
 	
 	return str_replace( '<script', '<script defer', $tag );
-}, 10, 2 );
-
-/**
- * Add async attribute to our lazysizes
- *
- * Use async instead of defer b/c we want to to execute as soon as the script is found,
- * since images depend on it.
- */
-add_filter( 'script_loader_tag', function ( $tag, $handle ) {
-	if ( 'lazysizes' !== $handle ) {
-		return $tag;
-	}
-	
-	return str_replace( '<script', '<script async', $tag );
 }, 10, 2 );

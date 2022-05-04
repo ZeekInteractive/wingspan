@@ -1,0 +1,16 @@
+/* Add tailwindcss */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Add our custom base styles */
+@import "./base/_base.css";
+
+/* Add custom components */
+@import "./components/_components.css";
+
+/* Add custom utilities */
+@import "./utilities/_utilities.css";
+
+/* Vendors */
+@import "vendors/_vendors.css";
