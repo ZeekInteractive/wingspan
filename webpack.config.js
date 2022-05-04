@@ -1,16 +1,6 @@
 const path = require( 'path' )
-const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' )
-const CssMinimizerPlugin = require( "css-minimizer-webpack-plugin" )
-
 const env = process.env.NODE_ENV
-
-const css = {
-	loader: 'css-loader',
-	options: {
-		url: false,
-		sourceMap: true,
-	}
-}
+const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' )
 
 // Let's put our configuration together
 module.exports = {
@@ -24,11 +14,6 @@ module.exports = {
 	mode: env,
 	stats: {
 		children: false,
-	},
-	optimization: {
-		minimizer: [
-			new CssMinimizerPlugin(),
-		]
 	},
 	module: {
 		// Pass in our loaders to handle file types appropriately
@@ -44,8 +29,8 @@ module.exports = {
 			},
 			// Handle our .scss files through our loaders
 			{
-				test: /\.scss$/,
-				use: [MiniCssExtractPlugin.loader, css],
+				test: /\.scss$/i,
+				use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
 			},
 		]
 	},

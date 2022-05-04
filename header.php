@@ -16,7 +16,7 @@ namespace App; ?>
 	wp_body_open(); ?>
 
 	<header class="px-4 mb-8">
-		<h1><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h1>
+		<h1 class="text-blue-500"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h1>
 	</header>
 
 	<main class="container flex-grow">
